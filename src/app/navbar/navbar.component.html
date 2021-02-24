@@ -1,0 +1,65 @@
+<div class="navbar">
+  <div class="navbar-logo__container">
+    <span class="material-icons icon-menu">
+      menu
+    </span>
+    <div class="navbar-logo">
+      <img src="./../../assets/svg/logo.svg" alt="logo" />
+    </div>
+  </div>
+
+  <div class="navbar-search">
+    <div class="navbar-links">
+      <a class="navbar-links__item">
+        Ссылки<span class="material-icons">arrow_drop_down</span>
+      </a>
+      <a class="navbar-links__item">
+        Контакты
+      </a>
+      <a class="navbar-links__item">
+        Теги <span class="material-icons">arrow_drop_down</span>
+      </a>
+      <a class="navbar-links__item">
+        Просьбы <span class="material-icons">arrow_drop_down</span>
+      </a>
+      <a class="navbar-links__item">
+        Избранное <span class="material-icons">arrow_drop_down</span>
+      </a>
+      <a class="navbar-links__item">
+        Посещения <span class="material-icons">arrow_drop_down</span>
+      </a>
+    </div>
+
+    <div class="navbar-search-container" *ngIf="showSearchForm">
+      <app-navbar-search
+        (clickedOutside)="closeSearchForm()"
+        (clickedSearch)="closeSearchForm()"
+      ></app-navbar-search>
+    </div>
+  </div>
+
+  <div>
+    <span
+      class="material-icons icon-search"
+      style="margin-right: 0px;"
+      (click)="openSearchForm($event)"
+    >
+      search
+    </span>
+    <span class="material-icons icon-add">add_circle</span>
+  </div>
+</div>
+
+<div class="profile-container">
+  <span class="material-icons icon-mail" style="margin-left: 15;">
+    mail_outline
+  </span>
+  <span class="material-icons icon-notifications">
+    notifications_none
+  </span>
+  <img
+    src="./../../assets/images/profile.png"
+    alt="Profile"
+    class="image-profile"
+  />
+</div>

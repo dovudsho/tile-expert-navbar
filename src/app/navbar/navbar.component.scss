@@ -1,0 +1,113 @@
+:host {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  background-color: #4876c3;
+  padding: 0 25px;
+  color: white;
+  box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%),
+    0 1px 18px 0 rgb(0 0 0 / 12%);
+}
+.navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  &-logo {
+    display: flex;
+    padding-top: 16px;
+    margin-right: 160px;
+
+    &__container {
+      display: flex;
+      align-items: center;
+    }
+
+    & img {
+      height: 30px;
+    }
+  }
+
+  &-search {
+    position: relative;
+  }
+
+  &-search-container {
+    position: absolute;
+    right: 10px;
+    top: 9px;
+    right: -23px;
+    left: 0px;
+    z-index: 1;
+  }
+
+  &-links {
+    display: flex;
+    padding: 8px 0;
+    margin-right: 5px;
+  }
+
+  &-links__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 0.9em;
+    padding: 8px;
+    font-size: 14px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(26, 89, 206, 0.404);
+    }
+
+    &:active {
+      background-color: rgba(255, 255, 255, 0);
+    }
+  }
+}
+
+.profile-container {
+  display: flex;
+  align-items: center;
+}
+
+.image-profile {
+  cursor: pointer;
+  vertical-align: middle;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+}
+
+.icons {
+  margin-left: 5px;
+}
+
+.icon {
+  &-mail {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  &-notifications {
+    margin-right: 15px;
+    cursor: pointer;
+  }
+
+  &-search {
+    cursor: pointer;
+  }
+
+  &-add {
+    cursor: pointer;
+    margin-left: 10px;
+  }
+
+  &-menu {
+    margin-right: 10px;
+    display: none;
+    cursor: pointer;
+  }
+}

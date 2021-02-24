@@ -1,0 +1,18 @@
+@media only screen and (min-width: 1024px) and (max-width: 1365px) {
+  :host {
+    font-size: 12px;
+  }
+
+  .author {
+    &__input {
+      padding: 7px;
+    }
+  }
+
+  .sort-by {
+    &__select {
+      height: 34px;
+      font-size: 12px;
+    }
+  }
+}
