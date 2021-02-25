@@ -8,6 +8,7 @@ import { NavbarComponent } from "./navbar/navbar.component";
 import { NavbarSearchComponent } from "./navbar/components/navbar-search/navbar-search.component";
 import { CheckboxComponent } from "./shared/components/checkbox/checkbox.component";
 import { FilterFormComponent } from "./navbar/components/navbar-search/filter-form/filter-form.component";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
 @NgModule({
   declarations: [
@@ -17,7 +18,13 @@ import { FilterFormComponent } from "./navbar/components/navbar-search/filter-fo
     CheckboxComponent,
     FilterFormComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule, ReactiveFormsModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

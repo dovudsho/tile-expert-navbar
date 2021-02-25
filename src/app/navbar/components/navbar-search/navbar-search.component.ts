@@ -39,11 +39,13 @@ export class NavbarSearchComponent {
       !this.searchInputContainerRef?.nativeElement.contains(event.target) &&
       !this.filterFormContainerRef?.nativeElement.contains(event.target)
     ) {
+      this.showFilterState = false;
       this.clickedOutside.emit(true);
     }
   }
 
   handleClickedSearch() {
+    this.showFilterState = false;
     this.clickedSearch.emit(true);
   }
 

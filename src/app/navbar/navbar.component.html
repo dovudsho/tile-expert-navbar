@@ -30,7 +30,10 @@
       </a>
     </div>
 
-    <div class="navbar-search-container" *ngIf="showSearchForm">
+    <div
+      class="navbar-search-container"
+      [@slideInOut]="showSearchForm ? 'in' : 'out'"
+    >
       <app-navbar-search
         (clickedOutside)="closeSearchForm()"
         (clickedSearch)="closeSearchForm()"
