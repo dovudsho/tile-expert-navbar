@@ -25,8 +25,8 @@ import { Component } from "@angular/core";
           transform: "translate3d(200%, 0, 0)",
         })
       ),
-      transition("in => out", animate("150ms ease-in-out")),
-      transition("out => in", animate("100ms ease-in-out")),
+      transition("in => out", animate("200ms ease-in-out")),
+      transition("out => in", animate("200ms ease-in-out")),
     ]),
   ],
 })
