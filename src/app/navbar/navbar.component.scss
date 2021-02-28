@@ -36,11 +36,12 @@
 
   &-search-container {
     position: absolute;
-    right: 10px;
     top: 9px;
     right: -23px;
-    left: 0px;
-    z-index: 1;
+    width: 0;
+    overflow: hidden;
+    padding: 0 0 6px 6px;
+    transition: 0.3s 0s linear;
   }
 
   &-links {
@@ -68,6 +69,10 @@
   }
 }
 
+.search-opened {
+  width: calc(100% + 23px);
+}
+
 .profile-container {
   display: flex;
   align-items: center;
@@ -79,10 +84,6 @@
   width: 32px;
   height: 32px;
   border-radius: 50%;
-}
-
-.ox-hidden {
-  overflow: hidden;
 }
 
 .icons {
@@ -101,6 +102,7 @@
   }
 
   &-search {
+    margin-right: 0px;
     cursor: pointer;
   }
 

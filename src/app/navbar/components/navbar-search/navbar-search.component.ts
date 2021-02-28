@@ -28,15 +28,9 @@ export class NavbarSearchComponent {
   @Output() clickedSearch = new EventEmitter();
 
   showFilterState = false;
-  navbarContainer!: Element;
 
   show() {
-    this.navbarContainer.classList.remove("ox-hidden");
     this.showFilterState = true;
-  }
-
-  constructor() {
-    this.navbarContainer = document.querySelector(".navbar");
   }
 
   @HostListener("document:click", ["$event"])
@@ -46,14 +40,12 @@ export class NavbarSearchComponent {
       !this.filterFormContainerRef?.nativeElement.contains(event.target)
     ) {
       this.showFilterState = false;
-      this.navbarContainer.classList.add("ox-hidden");
       this.clickedOutside.emit(true);
     }
   }
 
   handleClickedSearch() {
     this.showFilterState = false;
-    this.navbarContainer.classList.add("ox-hidden");
     this.clickedSearch.emit(true);
   }
 

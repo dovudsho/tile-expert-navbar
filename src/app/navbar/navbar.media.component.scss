@@ -23,9 +23,13 @@
       &-container {
         top: 13px;
         right: 9px;
-        left: 9px;
+        padding-right: 6px;
       }
     }
+  }
+
+  .search-opened {
+    width: calc(100% - 33px);
   }
 
   .profile-container {
@@ -70,9 +74,12 @@
       &-container {
         top: 12px;
         right: 61px;
-        left: 15px;
       }
     }
+  }
+
+  .search-opened {
+    width: calc(100% - 80px);
   }
 
   .profile-container {
@@ -111,7 +118,7 @@
     &-search {
       &-container {
         right: -23px;
-        top: 10px;
+        top: 7px;
       }
     }
   }

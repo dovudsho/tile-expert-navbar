@@ -1,4 +1,4 @@
-<div class="navbar ox-hidden">
+<div class="navbar">
   <div class="navbar-logo__container">
     <span class="material-icons icon-menu">
       menu
@@ -30,10 +30,7 @@
       </a>
     </div>
 
-    <div
-      class="navbar-search-container"
-      [@slideInOut]="showSearchForm ? 'in' : 'out'"
-    >
+    <div class="navbar-search-container" [class.search-opened]="showSearchForm">
       <app-navbar-search
         (clickedOutside)="closeSearchForm()"
         (clickedSearch)="closeSearchForm()"
@@ -42,11 +39,7 @@
   </div>
 
   <div>
-    <span
-      class="material-icons icon-search"
-      style="margin-right: 0px;"
-      (click)="openSearchForm($event)"
-    >
+    <span class="material-icons icon-search" (click)="openSearchForm($event)">
       search
     </span>
     <span class="material-icons icon-add">add_circle</span>
@@ -54,7 +47,7 @@
 </div>
 
 <div class="profile-container">
-  <span class="material-icons icon-mail" style="margin-left: 15;">
+  <span class="material-icons icon-mail">
     mail_outline
   </span>
   <span class="material-icons icon-notifications">
