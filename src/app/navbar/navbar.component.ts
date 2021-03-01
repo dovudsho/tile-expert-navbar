@@ -10,7 +10,7 @@ export class NavbarComponent {
 
   openSearchForm($event: Event) {
     const w = window.innerWidth;
-    if (w <= 1024) {
+    if (w < 1024) {
       const elRef = document.querySelector(
         ".profile-container"
       ) as HTMLDivElement;
